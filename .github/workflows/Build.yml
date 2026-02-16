@@ -1,0 +1,16 @@
+name: Build Python
+on: push
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout Python
+        uses: actions/checkout@v6
+        with:
+          repository: python/cpython
+          ref: 3.10
+      - run: PCbuild\get_externals.bat
+      - run: PCbuild\build.bat -e -p x64
+      - uses: actions/upload-artifact@v6
+        with:
+          path: PCbuild\amd64\python.exe
