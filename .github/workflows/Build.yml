@@ -11,7 +11,7 @@ jobs:
           ref: "3.10"
       - run: cmd /c PCbuild\get_externals.bat
       - run: cmd /c PCbuild\build.bat -e -p x64
-      - run: cmd /c PCBuild\amd64\python.exe -c "import ssl;print('hi')"
-      - uses: actions/upload-artifact@v6
+      - uses: actions/checkout@v6
         with:
-          path: PCbuild\amd64
+          repository: yt-dlp/yt-dlp
+      - run: cmd /c ..\PCBuild\amd64\python.exe "yt_dlp\__main__.py" -v test:generic
