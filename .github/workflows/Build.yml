@@ -13,4 +13,4 @@ jobs:
       - run: cmd /c PCbuild\build.bat -e -p x64
       - uses: actions/upload-artifact@v6
         with:
-          path: PCbuild\amd64\python.exe
+          path: PCbuild\amd64
