@@ -8,7 +8,7 @@ jobs:
         uses: actions/checkout@v6
         with:
           repository: python/cpython
-          ref: 3.10
+          ref: "3.10"
       - run: cmd /c PCbuild\get_externals.bat
       - run: cmd /c PCbuild\build.bat -e -p x64
       - uses: actions/upload-artifact@v6
