@@ -14,4 +14,5 @@ jobs:
       - uses: actions/checkout@v6
         with:
           repository: yt-dlp/yt-dlp
+          path: yt-dlp
       - run: cmd /c ..\PCBuild\amd64\python.exe "yt_dlp\__main__.py" -v test:generic
