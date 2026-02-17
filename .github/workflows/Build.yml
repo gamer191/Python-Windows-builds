@@ -13,4 +13,4 @@ jobs:
       # - run: cmd /c PCbuild\rt.bat
       - uses: actions/upload-artifact@v6
         with:
-          path: PCbuild\amd64
+          path: PCbuild
