@@ -10,7 +10,6 @@ jobs:
           repository: python/cpython
           ref: "3.10"
       - run: cmd /c PCbuild\build.bat -e -p x64
-      # - run: cmd /c PCbuild\rt.bat
       - uses: actions/upload-artifact@v6
         with:
           path: PCbuild
